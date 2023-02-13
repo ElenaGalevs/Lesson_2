@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_6</title>
+</head>
+<body>
+    <h3>Задача_6</h3> 
+    <h5>З клавіатури вводяться вартість товару та кількість одиниц 3 товарів. <br> Обчислити вартість кожного товару окремо та загальну вартість. <br> Вивести чек (як у супермаркеті) використовуючи елементи розмітки.</h5>
+    
+    <script>
+        let item1Price = parseFloat(prompt('введіть вартість товару 1',''));
+        let item1Quantity = parseFloat(prompt('введіть кількість товару 1',''));
+        let item2Price = parseFloat(prompt('введіть вартість товару 2',''));
+        let item2Quantity = parseFloat(prompt('введіть кількість товару 1',''));
+        let item3Price = parseFloat(prompt('введіть вартість товару 3',''));
+        let item3Quantity = parseFloat(prompt('введіть кількість товару 1',''));
+        
+        let item1 = item1Price *item1Quantity;
+        let item2 = item2Price *item2Quantity;
+        let item3 = item3Price *item3Quantity;
+
+        let checkAmount = item1 + item2 + item3;
+        
+
+        document.write(`
+                        <table>
+                        <tr>
+                          <td>Найменування товару</td>
+                          <td>Ціна</td>
+                          <td>Кількість</td>
+                          <td>Всього, грн</td>
+                        </tr>
+                        <tr>
+                          <td>ТОВАР 1</td> 
+                          <td> ${item1Price} </td>
+                          <td> ${item1Quantity} </td>
+                          <td> ${item1.toFixed(2)}</td>   
+                        </tr>
+                        <tr>
+                          <td>ТОВАР 2</td> 
+                          <td> ${item2Price} </td>
+                          <td> ${item2Quantity} </td>
+                          <td> ${item2.toFixed(2)}</td>   
+                        </tr>
+                        <tr>
+                          <td>ТОВАР 3</td> 
+                          <td> ${item3Price} </td>
+                          <td> ${item3Quantity} </td>
+                          <td> ${item3.toFixed(2)}</td>   
+                        </tr>
+                        <tr>
+                          <td>ПІДСУМОК|</td> 
+                          <td>========== </td>
+                          <td>========== </td>
+                          <td>${checkAmount.toFixed(2)}</td>   
+                        </tr>
+                        </table>              
+        
+                        `)
+
+
+    </script>
+    
+</body>
+</html>
